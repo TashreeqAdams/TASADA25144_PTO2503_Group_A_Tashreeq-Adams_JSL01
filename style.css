@@ -9,14 +9,20 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f4f7fd;
+  height: 100%;
+}
+
+.kanban {
+  display: flex;
 }
 
 /* Left Nav Bar */
 
 nav {
   width: 300px;
-  height: 1024px;
+  height: 100%;
   background-color: white;
+  position: fixed;
 }
 
 nav img {
@@ -49,6 +55,10 @@ nav button {
 }
 
 /* Main Header */
+
+.middle {
+  margin-left: 300px;
+}
 
 header {
   background-color: white;
@@ -135,13 +145,22 @@ main {
   padding-left: 24px;
 }
 
-.kanban {
-  display: flex;
-}
-
 @media (max-width: 375px) {
   .kanban {
     flex-direction: column;
+  }
+
+  .middle {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  body {
+    justify-content: left;
+  }
+
+  main {
+    margin-top: 70px;
   }
 
   header {
